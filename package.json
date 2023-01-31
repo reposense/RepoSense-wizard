@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@octokit/core": "^4.2.0",
+    "axios": "^1.2.6",
     "pinia": "^2.0.28",
     "pug-lint-vue": "^0.4.0",
     "vue": "^3.2.45",
