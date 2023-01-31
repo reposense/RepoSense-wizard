@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { startAuth } from '../util/github';
+import { useStore } from '../stores/store';
+import UserInfo from '../components/UserInfo.vue';
+
+const store = useStore();
+
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
+<template lang="pug">
+main
+  user-info(
+    v-if="store.isLoggedIn"
+  )
+  button.login-button(
+    v-else,
+    v-on:click="startAuth()"
+  ) Log in with Github
 </template>
