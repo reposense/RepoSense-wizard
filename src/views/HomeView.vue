@@ -8,7 +8,8 @@ const store = useStore();
 </script>
 
 <template lang="pug">
-main
+main 
+  h1 RepoSense Wizard
   user-info(
     v-if="store.isLoggedIn"
   )
