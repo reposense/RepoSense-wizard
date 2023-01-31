@@ -5,13 +5,17 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template lang="pug">
 header
-  img(alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125")
+  img.logo(
+    alt="Vue logo",
+    src="@/assets/logo.svg",
+    width="125",
+    height="125")
   .wrapper
-    HelloWorld(msg="You did it!")
+    hello-world(msg="You did it!")
   nav
-    RouterLink(to="/") Home
-    RouterLink(to="/about") About
-RouterView
+    router-link(to="/") Home
+    router-link(to="/about") About
+router-view
 </template>
 
 <style scoped>
