@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template lang="pug">
+router-link(
+  to="/",
+) Home
+router-link(
+  to="/auth",
+) Auth
 router-view
 </template>
 

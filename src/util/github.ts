@@ -8,6 +8,8 @@ function dec2hex (dec: number) {
   return dec.toString(16).padStart(2, "0")
 }
 
+// Generates a random string for use as the 'state' when starting oAuth
+// See https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#1-request-a-users-github-identity
 function generateId (len?: number) {
   const arr = new Uint8Array((len || 40) / 2)
   window.crypto.getRandomValues(arr)
@@ -24,11 +26,6 @@ export function startAuth() {
   const random_id = generateId();
   sessionStorage.setItem('github-oauth-state', random_id)
   // Redirect to github to start oAuth process
-  console.log(GITHUB_OAUTH_URL  + new URLSearchParams({
-    client_id: clientId,
-    scope: OAUTH_SCOPE,
-    state: random_id,
-  }))
   window.location.href = GITHUB_OAUTH_URL + '?' + new URLSearchParams({
     client_id: clientId,
     scope: OAUTH_SCOPE,
