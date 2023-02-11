@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AuthView from '../views/AuthView.vue'
-import AuthRedirect from '../views/AuthRedirect.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import AuthView from '../views/AuthView.vue';
+import AuthRedirect from '../views/AuthRedirect.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/auth',
@@ -20,7 +20,7 @@ const router = createRouter({
       path: '/auth/redirect',
       name: 'auth-redirect',
       component: AuthRedirect,
-    }
+    },
   ],
 });
 

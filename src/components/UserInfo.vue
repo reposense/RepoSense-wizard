@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { useStore } from '@/stores/store';
+import useStore from '@/stores/store';
 import { initClient, getAuthenticatedUser } from '@/util/github';
 
 const store = useStore();
