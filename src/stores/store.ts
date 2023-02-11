@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
-import { ref } from "vue";
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
-export const useStore = defineStore('store', () => {
+const useStore = defineStore('store', () => {
   const isLoggedIn = ref(false);
   const accessToken = ref('');
 
@@ -17,5 +17,7 @@ export const useStore = defineStore('store', () => {
     setLogIn,
     accessToken,
     setAccessToken,
-   };
+  };
 });
+
+export default useStore;

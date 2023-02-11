@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { onMounted } from 'vue';
 import router from '@/router';
-import { useStore } from '@/stores/store';
+import useStore from '@/stores/store';
 
 const authServerURL = import.meta.env.VITE_AUTH_SERVER_URL as string | undefined;
 if (!authServerURL) {

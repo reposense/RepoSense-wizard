@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { startAuth } from '../util/github';
-import { useStore } from '../stores/store';
+import useStore from '../stores/store';
 import UserInfo from '../components/UserInfo.vue';
 
 const store = useStore();
@@ -8,7 +8,7 @@ const store = useStore();
 </script>
 
 <template lang="pug">
-main 
+main
   h1 RepoSense Wizard
   user-info(
     v-if="store.isLoggedIn"
