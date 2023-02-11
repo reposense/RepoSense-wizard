@@ -19,8 +19,8 @@ function generateId(len?: number) {
 export function startAuth() {
   const GITHUB_OAUTH_URL = 'https://github.com/login/oauth/authorize';
   const OAUTH_SCOPE = 'public_repo';
-  const CALLBACK_URL_DEV = 'https://vvidday.github.io/RepoSense-wizard/auth/redirect';
-  const CALLBACK_URL_PROD = 'https://vvidday.github.io/RepoSense-wizard/auth';
+  const CALLBACK_URL_DEV = import.meta.env.VITE_CALLBACK_URL_DEV as string;
+  const CALLBACK_URL_PROD = import.meta.env.VITE_CALLBACK_URL_PROD as string;
   const clientId = import.meta.env.VITE_OAUTH_CLIENT_ID as string | undefined;
   if (!clientId) {
     throw new Error('VITE_OAUTH_CLIENT_ID is not defined, check your .env file');
